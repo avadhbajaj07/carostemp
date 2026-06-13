@@ -222,8 +222,8 @@ const ReceiptPDF = ({ bookingRef, driver, vehicle, searchParams, days, total }: 
 
       {/* Footer */}
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Thank you for choosing {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}.</Text>
-        <Text style={styles.footerText}>For support, please call {process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 XXX XXXX'} or email {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@carhiremauritius.com'}</Text>
+        <Text style={styles.footerText}>Thank you for choosing {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}.</Text>
+        <Text style={styles.footerText}>For support, please call {process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 XXX XXXX'} or email {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com'}</Text>
       </View>
 
     </Page>

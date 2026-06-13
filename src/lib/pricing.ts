@@ -1,5 +1,5 @@
 // lib/pricing.ts
-// Car Hire Mauritius — Dynamic Pricing Engine
+// Pleasure Drive Ltd — Dynamic Pricing Engine
 // ⚠️  SERVER-SIDE ONLY — never import this in client components
 
 import prisma from './db'

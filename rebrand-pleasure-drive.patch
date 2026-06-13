@@ -1,0 +1,604 @@
+diff --git a/src/app/[locale]/page.tsx b/src/app/[locale]/page.tsx
+index b1ebe39..f7fc160 100644
+--- a/src/app/[locale]/page.tsx
++++ b/src/app/[locale]/page.tsx
+@@ -10,7 +10,7 @@ import { ArrowRight } from 'lucide-react';
+ import { getTranslations } from 'next-intl/server';
+ 
+ export const metadata = {
+-  title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} | Luxury Car Rental — Island Wide Delivery`,
++  title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} | Luxury Car Rental — Island Wide Delivery`,
+   description: 'Discover Mauritius in style with our premium car rental service. 20+ elite vehicles, 24/7 support, and free island-wide delivery. Book your dream car today.',
+ };
+ 
+@@ -20,11 +20,11 @@ export default async function HomePage() {
+   const jsonLd = {
+     '@context': 'https://schema.org',
+     '@type': 'AutoRental',
+-    name: process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius',
++    name: process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd',
+     image: 'https://images.unsplash.com/photo-1506012733851-4043ce625295?q=80&w=1200',
+     description: 'Mauritius\'s most trusted luxury car rental service since 2010.',
+     url: process.env.NEXT_PUBLIC_APP_URL || 'https://carehireos.shop',
+-    telephone: process.env.NEXT_PUBLIC_BRAND_PHONE || '+23052528340',
++    telephone: process.env.NEXT_PUBLIC_BRAND_PHONE || '+2305255369',
+     priceRange: '$$$',
+     address: {
+       '@type': 'PostalAddress',
+diff --git a/src/app/about/page.tsx b/src/app/about/page.tsx
+index 3561351..6ab12eb 100644
+--- a/src/app/about/page.tsx
++++ b/src/app/about/page.tsx
+@@ -4,8 +4,8 @@ import { Award, Shield, Users, Trophy, ArrowRight, Play, Target, Heart, Globe }
+ import type { Metadata } from 'next';
+ 
+ export const metadata: Metadata = {
+-  title: `About Us | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} — Island's Premier Car Rental`,
+-  description: `Founded in 2010, ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} is the island's most trusted luxury car rental service. Learn our story, values, and commitment to excellence.`,
++  title: `About Us | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} — Island's Premier Car Rental`,
++  description: `Founded in 2010, ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} is the island's most trusted luxury car rental service. Learn our story, values, and commitment to excellence.`,
+ };
+ 
+ const VALUES = [
+@@ -74,7 +74,7 @@ export default function AboutPage() {
+               in Mauritius
+             </h1>
+             <p className="text-xl text-white/70 leading-relaxed">
+-              Born from a love of our island and a passion for exceptional service, {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} has been redefining what it means to travel in Mauritius since 2010.
++              Born from a love of our island and a passion for exceptional service, {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} has been redefining what it means to travel in Mauritius since 2010.
+             </p>
+             <div className="flex items-center gap-4">
+               <Link
+@@ -146,7 +146,7 @@ export default function AboutPage() {
+               </h2>
+             </div>
+             <p className="text-lg text-mid-gray leading-relaxed">
+-              Founded in 2010, {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} was born from a simple vision: to provide a car rental service that truly matches the unparalleled beauty and hospitality of our island.
++              Founded in 2010, {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} was born from a simple vision: to provide a car rental service that truly matches the unparalleled beauty and hospitality of our island.
+             </p>
+             <p className="text-mid-gray leading-relaxed">
+               We don't just hand over keys — we craft memories. From the moment you land at SSR Airport to your final sunset drive along the Grand Baie coast, our elite fleet and dedicated team are your island companions.
+diff --git a/src/app/accessibility/page.tsx b/src/app/accessibility/page.tsx
+index ced9099..d8b4c05 100644
+--- a/src/app/accessibility/page.tsx
++++ b/src/app/accessibility/page.tsx
+@@ -17,7 +17,7 @@ export default function AccessibilityPage() {
+ 
+         <div className="prose prose-lg prose-navy max-w-none">
+           <p>
+-            <strong>{process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}</strong> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to guarantee we provide equal access to our premium car rental services.
++            <strong>{process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}</strong> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to guarantee we provide equal access to our premium car rental services.
+           </p>
+ 
+           <h2 className="text-2xl font-display font-bold text-navy mt-12 mb-6">Conformance Status</h2>
+@@ -25,16 +25,16 @@ export default function AccessibilityPage() {
+             The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
+           </p>
+           <p>
+-            {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} is partially conformant with <strong>WCAG 2.1 level AA</strong>. Partially conformant means that some parts of the content do not fully conform to the accessibility standard. We are actively working to resolve these limitations.
++            {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} is partially conformant with <strong>WCAG 2.1 level AA</strong>. Partially conformant means that some parts of the content do not fully conform to the accessibility standard. We are actively working to resolve these limitations.
+           </p>
+ 
+           <h2 className="text-2xl font-display font-bold text-navy mt-12 mb-6">Feedback & Contact</h2>
+           <p>
+-            We welcome your feedback on the accessibility of {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}. Please let us know if you encounter accessibility barriers on our platform:
++            We welcome your feedback on the accessibility of {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}. Please let us know if you encounter accessibility barriers on our platform:
+           </p>
+           <ul className="list-disc pl-6 space-y-2 my-6">
+-            <li>Phone: <a href={`tel:${process.env.NEXT_PUBLIC_BRAND_PHONE || '+23052528340'}`} className="text-gold hover:underline">{process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 5252 8340'}</a></li>
+-            <li>E-mail: <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'support@carhiremauritius.com'}`} className="text-gold hover:underline">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'support@carhiremauritius.com'}</a></li>
++            <li>Phone: <a href={`tel:${process.env.NEXT_PUBLIC_BRAND_PHONE || '+23052528340'}`} className="text-gold hover:underline">{process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 5255 3669'}</a></li>
++            <li>E-mail: <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com'}`} className="text-gold hover:underline">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com'}</a></li>
+             <li>Postal Address: SSR International Airport, Plaine Magnien, Mauritius</li>
+           </ul>
+           <p>
+@@ -43,7 +43,7 @@ export default function AccessibilityPage() {
+ 
+           <h2 className="text-2xl font-display font-bold text-navy mt-12 mb-6">Technical Specifications</h2>
+           <p>
+-            Accessibility of {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:
++            Accessibility of {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:
+           </p>
+           <ul className="list-disc pl-6 space-y-2 my-6">
+             <li>HTML</li>
+diff --git a/src/app/admin/branches/page.tsx b/src/app/admin/branches/page.tsx
+index 2a9050d..3521cfa 100644
+--- a/src/app/admin/branches/page.tsx
++++ b/src/app/admin/branches/page.tsx
+@@ -160,7 +160,7 @@ export default function BranchesPage() {
+                   <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Branch Name *</p><input required value={branchForm.name} onChange={e => setBranchForm(p => ({ ...p, name: e.target.value }))} className={inputCls} placeholder="e.g. Airport Branch" /></div>
+                   <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Address *</p><input required value={branchForm.address} onChange={e => setBranchForm(p => ({ ...p, address: e.target.value }))} className={inputCls} placeholder="e.g. SSR Airport Terminal, Plaine Magnien" /></div>
+                   <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Phone</p><input value={branchForm.phone} onChange={e => setBranchForm(p => ({ ...p, phone: e.target.value }))} className={inputCls} placeholder="+230 XXXX XXXX" /></div>
+-                  <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Email</p><input type="email" value={branchForm.email} onChange={e => setBranchForm(p => ({ ...p, email: e.target.value }))} className={inputCls} placeholder="branch@carhiremauritius.com" /></div>
++                  <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Email</p><input type="email" value={branchForm.email} onChange={e => setBranchForm(p => ({ ...p, email: e.target.value }))} className={inputCls} placeholder="pleasuredriveltd@gmail.com" /></div>
+                 </div>
+               </div>
+ 
+diff --git a/src/app/admin/page.tsx b/src/app/admin/page.tsx
+index 926003d..5c3e856 100644
+--- a/src/app/admin/page.tsx
++++ b/src/app/admin/page.tsx
+@@ -73,7 +73,7 @@ export default function AdminOverview() {
+       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+         <div>
+           <h1 className="text-3xl font-black text-[#1E293B] uppercase tracking-tight">Smart Command Center</h1>
+-          <p className="text-gray-500 font-medium mt-1">Real-time fleet intelligence for {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}.</p>
++          <p className="text-gray-500 font-medium mt-1">Real-time fleet intelligence for {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}.</p>
+         </div>
+         <button
+           onClick={() => setIsModalOpen(true)}
+diff --git a/src/app/admin/settings/page.tsx b/src/app/admin/settings/page.tsx
+index 8f201f9..dd9a185 100644
+--- a/src/app/admin/settings/page.tsx
++++ b/src/app/admin/settings/page.tsx
+@@ -56,7 +56,7 @@ export default function AdminSettingsPage() {
+     },
+     {
+       title: 'Admin Authentication',
+-      description: `Admin access runs through NextAuth credentials with role-aware sessions. The seeded admin account is ${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'admin@carhiremauritius.com'} — change this in production.`,
++      description: `Admin access runs through NextAuth credentials with role-aware sessions. The seeded admin account is ${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com'} — change this in production.`,
+       icon: Shield,
+       status: 'ok',
+     },
+diff --git a/src/app/api/cron/abandoned-carts/route.ts b/src/app/api/cron/abandoned-carts/route.ts
+index 4ba7fc7..093f154 100644
+--- a/src/app/api/cron/abandoned-carts/route.ts
++++ b/src/app/api/cron/abandoned-carts/route.ts
+@@ -54,7 +54,7 @@ export async function GET(req: Request) {
+ 
+       await sendEmail({
+         to: cart.user.email,
+-        subject: `Complete your booking at ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}`,
++        subject: `Complete your booking at ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}`,
+         html: emailHtml,
+       });
+ 
+diff --git a/src/app/contact/page.tsx b/src/app/contact/page.tsx
+index 38d6680..e41178b 100644
+--- a/src/app/contact/page.tsx
++++ b/src/app/contact/page.tsx
+@@ -16,7 +16,7 @@ const CONTACT_ITEMS = [
+   {
+     icon: MessageSquare,
+     title: 'WhatsApp',
+-    detail: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '+230 5702 0000',
++    detail: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '+230 5255 3669',
+     sub: 'Instant messaging — we reply in minutes',
+     href: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_PHONE?.replace(/[^0-9]/g, '') || '2305702000'}`,
+     color: 'text-emerald-500', bg: 'bg-emerald-50',
+@@ -24,9 +24,9 @@ const CONTACT_ITEMS = [
+   {
+     icon: Mail,
+     title: 'Email Us',
+-    detail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@carhiremauritius.com',
++    detail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com',
+     sub: 'General enquiries & booking questions',
+-    href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@carhiremauritius.com'}`,
++    href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com'}`,
+     color: 'text-purple-500', bg: 'bg-purple-50',
+   },
+   {
+@@ -214,8 +214,8 @@ export default function ContactPage() {
+               <div className="absolute bottom-0 p-8">
+                 <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gold mb-2">Emergency Line</p>
+                 <p className="text-white font-bold text-lg mb-1">"Breakdown support — active island-wide, 24/7."</p>
+-                <a href={`tel:${process.env.NEXT_PUBLIC_EMERGENCY_PHONE || '+2305911000'}`} className="text-gold font-black text-xl tracking-wider hover:underline">
+-                  {process.env.NEXT_PUBLIC_EMERGENCY_PHONE || '+230 5911 0000'}
++                <a href={`tel:${process.env.NEXT_PUBLIC_EMERGENCY_PHONE || '+2305255369'}`} className="text-gold font-black text-xl tracking-wider hover:underline">
++                  {process.env.NEXT_PUBLIC_EMERGENCY_PHONE || '+230 5255 3669'}
+                 </a>
+               </div>
+             </div>
+diff --git a/src/app/layout.tsx b/src/app/layout.tsx
+index 6f204ed..a19aa19 100644
+--- a/src/app/layout.tsx
++++ b/src/app/layout.tsx
+@@ -13,32 +13,32 @@ const inter = Inter({
+ 
+ export const metadata: Metadata = {
+   title: {
+-    default: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} | Luxury Car Rental — Island-Wide Delivery`,
+-    template: `%s | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}`,
++    default: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} | Luxury Car Rental — Island-Wide Delivery`,
++    template: `%s | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}`,
+   },
+   description: 'Mauritius\'s most trusted luxury car rental service since 2010. 20+ premium vehicles, free island-wide delivery, 24/7 support. Book your dream car today.',
+   keywords: ['car hire mauritius', 'luxury car rental mauritius', 'rent a car mauritius', 'car hire SSR airport', 'sports car rental mauritius'],
+-  authors: [{ name: process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius' }],
+-  creator: process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius',
++  authors: [{ name: process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd' }],
++  creator: process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd',
+   openGraph: {
+     type: 'website',
+     locale: 'en_US',
+     url: process.env.NEXT_PUBLIC_APP_URL || 'https://carehireos.shop',
+-    siteName: process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius',
+-    title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} | Luxury Car Rental`,
++    siteName: process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd',
++    title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} | Luxury Car Rental`,
+     description: 'Experience Mauritius in the finest machines. Premium fleet, free delivery, 24/7 concierge support.',
+     images: [
+       {
+         url: 'https://images.unsplash.com/photo-1506012733851-4043ce625295?q=80&w=1200',
+         width: 1200,
+         height: 630,
+-        alt: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} — Luxury Island Rentals`,
++        alt: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} — Luxury Island Rentals`,
+       },
+     ],
+   },
+   twitter: {
+     card: 'summary_large_image',
+-    title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} | Luxury Car Rental`,
++    title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} | Luxury Car Rental`,
+     description: 'Experience Mauritius in the finest machines. Premium fleet, free delivery, 24/7 support.',
+   },
+   robots: {
+diff --git a/src/app/locations/page.tsx b/src/app/locations/page.tsx
+index 4a0a56a..30645ea 100644
+--- a/src/app/locations/page.tsx
++++ b/src/app/locations/page.tsx
+@@ -4,67 +4,81 @@ import { MapPin, Plane, Ship, Building, Phone, Clock, ArrowRight, Car, Navigatio
+ import type { Metadata } from 'next';
+ 
+ export const metadata: Metadata = {
+-  title: `Our Locations | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} — 4 Island-Wide Branches`,
+-  description: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} operates from 4 strategic branches including SSR International Airport, Grand Baie, Port Louis Harbour, and Flic en Flac. Island-wide delivery available.`,
++  title: `Our Locations | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} — 5 Island-Wide Branches`,
++  description: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} operates from 5 branches across Mauritius including Mapou, Trou aux Biches, Pereybere, SSR Airport, and Flic en Flac. Island-wide delivery available.`,
+ };
+ 
+ const LOCATIONS = [
+   {
+-    name: 'SSR International Airport',
++    name: 'SSR Airport Branch',
+     type: 'Airport Branch',
+     icon: Plane,
+-    address: 'Arrivals Hall, Plaine Magnien, Mauritius',
+-    phone: '+230 603 0000',
+-    whatsapp: '+230 5703 0000',
++    address: 'SSR International Airport, Plaine Magnien, Mauritius',
++    phone: '+230 5255 3669',
++    whatsapp: '+230 5255 3669',
+     hours: '24 / 7 (Pre-booked pickups)',
+-    desc: 'Our flagship branch located right in the arrivals hall. Experience seamless meet & greet service from our smartly dressed concierge team the moment you land.',
++    desc: 'Our flagship branch located right at the airport. Experience seamless meet & greet service from our team the moment you land.',
+     features: ['Meet & Greet Service', 'Instant Handover', 'All Hours'],
+     img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1000&auto=format&fit=crop',
+     mapUrl: 'https://maps.google.com/?q=SSR+International+Airport+Mauritius',
+     featured: true,
+   },
+   {
+-    name: 'Grand Baie Office',
+-    type: 'Luxury Hub',
++    name: 'Pereybere',
++    type: 'Main Hub',
+     icon: Building,
+-    address: 'Royal Road, Grand Baie, Mauritius',
+-    phone: '+230 211 1100',
+-    whatsapp: '+230 5711 1100',
++    address: '23, Escale Nord Business Hub, Chemins 20 Pieds, Grand Bay, Mauritius',
++    phone: '+230 5255 3669',
++    whatsapp: '+230 5255 3669',
+     hours: '08:00 – 18:00 Daily',
+-    desc: 'Serving the north of the island in the heart of Mauritius\'s premier resort town. Ideal for villa deliveries, hotel handovers, and luxury sedan pickups.',
++    desc: 'Serving the north of the island in the heart of Mauritius\'s premier resort town. Ideal for villa deliveries, hotel handovers, and pickups.',
+     features: ['Villa Delivery', 'Hotel Pickup', 'North Coast'],
+     img: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop',
+-    mapUrl: 'https://maps.google.com/?q=Grand+Baie+Mauritius',
++    mapUrl: 'https://maps.google.com/?q=Pereybere+Mauritius',
+     featured: false,
+   },
+   {
+-    name: 'Port Louis Harbour',
+-    type: 'Capital City Port',
++    name: 'Trou aux Biches',
++    type: 'North Coast Branch',
+     icon: Ship,
+-    address: 'Quay Street, Port Louis, Mauritius',
+-    phone: '+230 211 2200',
+-    whatsapp: '+230 5711 2200',
+-    hours: '09:00 – 17:00 Mon–Sat',
+-    desc: 'Located in the vibrant capital city at the waterfront. Perfect for cruise passengers, business travellers, and those exploring the bustling city centre.',
+-    features: ['Cruise Transfers', 'Business Rentals', 'City Centre'],
++    address: 'Trou aux Biches, Mauritius',
++    phone: '+230 5255 3669',
++    whatsapp: '+230 5255 3669',
++    hours: '08:00 – 18:00 Daily',
++    desc: 'Located on the popular north coast, perfect for guests staying along Trou aux Biches and nearby beach resorts.',
++    features: ['Beach Pickups', 'Resort Delivery', 'North Coast'],
+     img: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1000&auto=format&fit=crop',
+-    mapUrl: 'https://maps.google.com/?q=Port+Louis+Mauritius',
++    mapUrl: 'https://maps.google.com/?q=Trou+aux+Biches+Mauritius',
+     featured: false,
+   },
+   {
+-    name: 'Flic en Flac Coastal Office',
++    name: 'Flic en Flac',
+     type: 'West Coast Hub',
+     icon: MapPin,
+-    address: 'Coastal Road, Flic en Flac, Mauritius',
+-    phone: '+230 211 3300',
+-    whatsapp: '+230 5711 3300',
++    address: 'Flic en Flac, Mauritius',
++    phone: '+230 5255 3669',
++    whatsapp: '+230 5255 3669',
+     hours: '08:00 – 19:00 Daily',
+-    desc: 'Our west coast hub serving the most beautiful lagoon resorts. Ideal for guests at Heritage, Paradis, and all beachside properties along the sunset coast.',
++    desc: 'Our west coast hub serving the most beautiful lagoon resorts along the sunset coast.',
+     features: ['Resort Delivery', 'Beach Pickups', 'West Coast'],
+     img: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1000&auto=format&fit=crop',
+     mapUrl: 'https://maps.google.com/?q=Flic+en+Flac+Mauritius',
+     featured: false,
+   },
++  {
++    name: 'Mapou',
++    type: 'Central Branch',
++    icon: Car,
++    address: 'Mapou, Mauritius',
++    phone: '+230 5255 3669',
++    whatsapp: '+230 5255 3669',
++    hours: '08:00 – 18:00 Daily',
++    desc: 'Conveniently located in central Mauritius, easy access for vehicle handovers and returns.',
++    features: ['Central Location', 'Vehicle Handover', 'Easy Access'],
++    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=1000&auto=format&fit=crop',
++    mapUrl: 'https://maps.google.com/?q=Mapou+Mauritius',
++    featured: false,
++  },
+ ];
+ 
+ export default function LocationsPage() {
+@@ -87,13 +101,13 @@ export default function LocationsPage() {
+             Island <span className="italic text-gold">Coverage</span>
+           </h1>
+           <p className="text-white/60 text-lg max-w-xl mx-auto leading-relaxed">
+-            4 strategic branches + complimentary island-wide concierge delivery. Wherever you are in Mauritius, we'll bring the car to you.
++            5 branches + complimentary island-wide concierge delivery. Wherever you are in Mauritius, we'll bring the car to you.
+           </p>
+ 
+           {/* Quick stats */}
+           <div className="flex flex-wrap justify-center gap-6 pt-8">
+             {[
+-              { val: '4', label: 'Branch Locations' },
++              { val: '5', label: 'Branch Locations' },
+               { val: '2h', label: 'Max Delivery Time' },
+               { val: '24/7', label: 'Airport Branch' },
+               { val: 'Free', label: 'Island Delivery' },
+diff --git a/src/app/page.tsx b/src/app/page.tsx
+index 284b305..e305b79 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -9,7 +9,7 @@ import BrandMarquee from '@/src/components/home/BrandMarquee';
+ import { ArrowRight } from 'lucide-react';
+ 
+ export const metadata = {
+-  title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} | Luxury Car Rental — Island Wide Delivery`,
++  title: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} | Luxury Car Rental — Island Wide Delivery`,
+   description: 'Discover Mauritius in style with our premium car rental service. 20+ elite vehicles, 24/7 support, and free island-wide delivery. Book your dream car today.',
+ };
+ 
+@@ -17,7 +17,7 @@ export default function HomePage() {
+   const jsonLd = {
+     '@context': 'https://schema.org',
+     '@type': 'AutoRental',
+-    name: process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius',
++    name: process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd',
+     image: 'https://images.unsplash.com/photo-1506012733851-4043ce625295?q=80&w=1200',
+     description: 'Mauritius\'s most trusted luxury car rental service since 2010.',
+     url: process.env.NEXT_PUBLIC_APP_URL || 'https://carehireos.shop',
+diff --git a/src/app/privacy/page.tsx b/src/app/privacy/page.tsx
+index 1cfc74d..1504c5d 100644
+--- a/src/app/privacy/page.tsx
++++ b/src/app/privacy/page.tsx
+@@ -3,7 +3,7 @@ import { Shield } from 'lucide-react';
+ 
+ export const metadata = {
+   title: 'Privacy Policy',
+-  description: `Privacy Policy for ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}`,
++  description: `Privacy Policy for ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}`,
+ };
+ 
+ export default function PrivacyPage() {
+@@ -21,7 +21,7 @@ export default function PrivacyPage() {
+ 
+         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-navy/5 prose prose-navy max-w-none">
+           <p className="lead text-lg text-mid-gray mb-8">
+-            At {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}, we are committed to protecting your personal information and respecting your privacy. This policy outlines how we collect, use, and protect your data.
++            At {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}, we are committed to protecting your personal information and respecting your privacy. This policy outlines how we collect, use, and protect your data.
+           </p>
+ 
+           <h2 className="text-2xl font-display font-bold text-navy mt-8 mb-4">1. Information We Collect</h2>
+diff --git a/src/app/rental-agreement/page.tsx b/src/app/rental-agreement/page.tsx
+index e8f5c6b..64efd98 100644
+--- a/src/app/rental-agreement/page.tsx
++++ b/src/app/rental-agreement/page.tsx
+@@ -3,7 +3,7 @@ import { FileText } from 'lucide-react';
+ 
+ export const metadata = {
+   title: 'Rental Agreement',
+-  description: `Standard Rental Agreement for ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}`,
++  description: `Standard Rental Agreement for ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}`,
+ };
+ 
+ export default function RentalAgreementPage() {
+@@ -21,7 +21,7 @@ export default function RentalAgreementPage() {
+ 
+         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-navy/5 prose prose-navy max-w-none">
+           <p className="lead text-lg text-mid-gray mb-8">
+-            This Rental Agreement constitutes a legal contract between {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} (the "Company") and the Renter. Please ensure you fully understand these conditions before signing at the time of vehicle pickup.
++            This Rental Agreement constitutes a legal contract between {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} (the "Company") and the Renter. Please ensure you fully understand these conditions before signing at the time of vehicle pickup.
+           </p>
+ 
+           <h2 className="text-2xl font-display font-bold text-navy mt-8 mb-4">1. Vehicle Condition and Return</h2>
+diff --git a/src/app/terms/page.tsx b/src/app/terms/page.tsx
+index 8fcb432..eb6f4c6 100644
+--- a/src/app/terms/page.tsx
++++ b/src/app/terms/page.tsx
+@@ -3,7 +3,7 @@ import { ShieldAlert } from 'lucide-react';
+ 
+ export const metadata = {
+   title: 'Terms & Conditions',
+-  description: `Terms and Conditions for ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}`,
++  description: `Terms and Conditions for ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}`,
+ };
+ 
+ export default function TermsPage() {
+@@ -21,7 +21,7 @@ export default function TermsPage() {
+ 
+         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-navy/5 prose prose-navy max-w-none">
+           <p className="lead text-lg text-mid-gray mb-8">
+-            Please read these terms and conditions carefully before booking a vehicle with {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}. By using our services, you agree to be bound by these terms.
++            Please read these terms and conditions carefully before booking a vehicle with {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}. By using our services, you agree to be bound by these terms.
+           </p>
+ 
+           <h2 className="text-2xl font-display font-bold text-navy mt-8 mb-4">1. General Requirements</h2>
+diff --git a/src/components/booking/ReceiptPDF.tsx b/src/components/booking/ReceiptPDF.tsx
+index 8f6d499..c288117 100644
+--- a/src/components/booking/ReceiptPDF.tsx
++++ b/src/components/booking/ReceiptPDF.tsx
+@@ -222,8 +222,8 @@ const ReceiptPDF = ({ bookingRef, driver, vehicle, searchParams, days, total }:
+ 
+       {/* Footer */}
+       <View style={styles.footer}>
+-        <Text style={styles.footerText}>Thank you for choosing {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}.</Text>
+-        <Text style={styles.footerText}>For support, please call {process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 XXX XXXX'} or email {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@carhiremauritius.com'}</Text>
++        <Text style={styles.footerText}>Thank you for choosing {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}.</Text>
++        <Text style={styles.footerText}>For support, please call {process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 XXX XXXX'} or email {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com'}</Text>
+       </View>
+ 
+     </Page>
+diff --git a/src/components/layout/Footer.tsx b/src/components/layout/Footer.tsx
+index 20c850e..9f6eb43 100644
+--- a/src/components/layout/Footer.tsx
++++ b/src/components/layout/Footer.tsx
+@@ -56,11 +56,11 @@ export default function Footer() {
+                 <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+               </Link>
+               <a
+-                href={`tel:${process.env.NEXT_PUBLIC_BRAND_PHONE || '+2302110000'}`}
++                href={`tel:${process.env.NEXT_PUBLIC_BRAND_PHONE || '+2305255369'}`}
+                 className="h-14 px-8 rounded-2xl bg-white/5 hover:bg-white/10 text-white font-bold flex items-center gap-3 border border-white/10 hover:border-white/20 transition-all duration-300"
+               >
+                 <Phone size={18} className="text-gold" />
+-                {process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 211 0000'}
++                {process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 5255 3669'}
+               </a>
+             </div>
+           </div>
+@@ -76,7 +76,7 @@ export default function Footer() {
+                 <Car size={24} className="text-white" />
+               </div>
+               <div>
+-                <p className="text-xl font-display font-bold text-white leading-none">{process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}</p>
++                <p className="text-xl font-display font-bold text-white leading-none">{process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}</p>
+               </div>
+             </Link>
+ 
+@@ -88,8 +88,8 @@ export default function Footer() {
+             {/* Contact Info */}
+             <div className="space-y-4">
+               {[
+-                { icon: Phone, text: process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 211 0000', href: `tel:${process.env.NEXT_PUBLIC_BRAND_PHONE || '+2302110000'}` },
+-                { icon: Mail, text: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@carhiremauritius.com', href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@carhiremauritius.com'}` },
++                { icon: Phone, text: process.env.NEXT_PUBLIC_BRAND_PHONE || '+230 5255 3669', href: `tel:${process.env.NEXT_PUBLIC_BRAND_PHONE || '+2305255369'}` },
++                { icon: Mail, text: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com', href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'pleasuredriveltd@gmail.com'}` },
+                 { icon: MapPin, text: 'SSR Airport, Plaine Magnien, Mauritius', href: '/locations' },
+               ].map(({ icon: Icon, text, href }) => (
+                 <a key={text} href={href} className="flex items-center gap-3 text-sm text-white/50 hover:text-white transition-colors group">
+@@ -175,7 +175,7 @@ export default function Footer() {
+         {/* Bottom Bar */}
+         <div className="py-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+           <p className="text-xs text-white/30">
+-            © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}. All rights reserved.
++            © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}. All rights reserved.
+           </p>
+           <div className="flex items-center gap-6">
+             <span className="text-xs text-white/20">Designed for excellence in island travel</span>
+diff --git a/src/components/layout/Navbar.tsx b/src/components/layout/Navbar.tsx
+index af05985..cd4734d 100644
+--- a/src/components/layout/Navbar.tsx
++++ b/src/components/layout/Navbar.tsx
+@@ -72,7 +72,7 @@ export default function Navbar() {
+                 "text-[17px] font-display font-bold tracking-tight transition-colors duration-300 leading-none block",
+                 isScrolled || !isTransparentPage ? "text-navy" : "text-white"
+               )}>
+-                {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}
++                {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}
+               </span>
+             </div>
+           </Link>
+diff --git a/src/lib/email-templates.ts b/src/lib/email-templates.ts
+index 76de569..c55df25 100644
+--- a/src/lib/email-templates.ts
++++ b/src/lib/email-templates.ts
+@@ -9,7 +9,7 @@ export const abandonedCartTemplate = (name: string, carModel: string, checkoutUr
+     </a>
+   </div>
+   <p>If you have any questions, feel free to reply to this email.</p>
+-  <p>Best regards,<br>${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} Team</p>
++  <p>Best regards,<br>${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} Team</p>
+ </div>
+ `;
+ 
+@@ -24,8 +24,8 @@ export const bookingFollowupTemplate = (name: string, carModel: string, reviewUr
+       Leave a Review
+     </a>
+   </div>
+-  <p>Thank you for choosing ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}!</p>
+-  <p>Best regards,<br>${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} Team</p>
++  <p>Thank you for choosing ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}!</p>
++  <p>Best regards,<br>${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} Team</p>
+ </div>
+ `;
+ 
+@@ -36,7 +36,7 @@ export const bookingConfirmationTemplate = (name: string, bookingRef: string, ca
+   </div>
+   <div style="padding: 20px; background-color: #f9f9f9;">
+     <p>Hi ${name},</p>
+-    <p>Thank you for choosing ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}. Your booking has been successfully received.</p>
++    <p>Thank you for choosing ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}. Your booking has been successfully received.</p>
+     
+     <div style="background-color: white; padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd;">
+       <h3 style="margin-top: 0; color: #1A4D5C;">Booking Details</h3>
+@@ -48,7 +48,7 @@ export const bookingConfirmationTemplate = (name: string, bookingRef: string, ca
+     
+     <p>If you have any questions or need to make changes, please reply to this email or contact our support team.</p>
+     <p>We look forward to seeing you!</p>
+-    <p>Best regards,<br><strong>${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} Team</strong></p>
++    <p>Best regards,<br><strong>${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} Team</strong></p>
+   </div>
+ </div>
+ `;
+@@ -59,7 +59,7 @@ export const adminBookingNotificationTemplate = (bookingRef: string, customerNam
+     <h2 style="color: white; margin: 0;">New Booking Alert 🚨</h2>
+   </div>
+   <div style="padding: 20px; background-color: #f9f9f9;">
+-    <p>A new booking has just been created on ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}.</p>
++    <p>A new booking has just been created on ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}.</p>
+     
+     <div style="background-color: white; padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd;">
+       <h3 style="margin-top: 0; color: #1A4D5C;">Booking Reference: ${bookingRef}</h3>
+diff --git a/src/lib/email.ts b/src/lib/email.ts
+index 0fdc1c6..bf01654 100644
+--- a/src/lib/email.ts
++++ b/src/lib/email.ts
+@@ -21,7 +21,7 @@ export const sendEmail = async ({
+ 
+   try {
+     const data = await resend.emails.send({
+-      from: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} <${process.env.RESEND_FROM_EMAIL || 'booking@carhireos.shop'}>`,
++      from: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} <${process.env.RESEND_FROM_EMAIL || 'booking@carhireos.shop'}>`,
+       to,
+       subject,
+       html,
+diff --git a/src/lib/pricing.ts b/src/lib/pricing.ts
+index ee1e913..fa2fc47 100644
+--- a/src/lib/pricing.ts
++++ b/src/lib/pricing.ts
+@@ -1,5 +1,5 @@
+ // lib/pricing.ts
+-// Car Hire Mauritius — Dynamic Pricing Engine
++// Pleasure Drive Ltd — Dynamic Pricing Engine
+ // ⚠️  SERVER-SIDE ONLY — never import this in client components
+ 
+ import prisma from './db'

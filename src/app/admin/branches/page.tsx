@@ -160,7 +160,7 @@ export default function BranchesPage() {
                   <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Branch Name *</p><input required value={branchForm.name} onChange={e => setBranchForm(p => ({ ...p, name: e.target.value }))} className={inputCls} placeholder="e.g. Airport Branch" /></div>
                   <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Address *</p><input required value={branchForm.address} onChange={e => setBranchForm(p => ({ ...p, address: e.target.value }))} className={inputCls} placeholder="e.g. SSR Airport Terminal, Plaine Magnien" /></div>
                   <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Phone</p><input value={branchForm.phone} onChange={e => setBranchForm(p => ({ ...p, phone: e.target.value }))} className={inputCls} placeholder="+230 XXXX XXXX" /></div>
-                  <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Email</p><input type="email" value={branchForm.email} onChange={e => setBranchForm(p => ({ ...p, email: e.target.value }))} className={inputCls} placeholder="branch@carhiremauritius.com" /></div>
+                  <div><p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Email</p><input type="email" value={branchForm.email} onChange={e => setBranchForm(p => ({ ...p, email: e.target.value }))} className={inputCls} placeholder="pleasuredriveltd@gmail.com" /></div>
                 </div>
               </div>
 

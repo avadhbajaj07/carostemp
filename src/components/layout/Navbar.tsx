@@ -72,7 +72,7 @@ export default function Navbar() {
                 "text-[17px] font-display font-bold tracking-tight transition-colors duration-300 leading-none block",
                 isScrolled || !isTransparentPage ? "text-navy" : "text-white"
               )}>
-                {process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'}
+                {process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'}
               </span>
             </div>
           </Link>

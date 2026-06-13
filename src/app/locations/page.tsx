@@ -4,65 +4,79 @@ import { MapPin, Plane, Ship, Building, Phone, Clock, ArrowRight, Car, Navigatio
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: `Our Locations | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} — 4 Island-Wide Branches`,
-  description: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Car Hire Mauritius'} operates from 4 strategic branches including SSR International Airport, Grand Baie, Port Louis Harbour, and Flic en Flac. Island-wide delivery available.`,
+  title: `Our Locations | ${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} — 5 Island-Wide Branches`,
+  description: `${process.env.NEXT_PUBLIC_BRAND_NAME || 'Pleasure Drive Ltd'} operates from 5 branches across Mauritius including Mapou, Trou aux Biches, Pereybere, SSR Airport, and Flic en Flac. Island-wide delivery available.`,
 };
 
 const LOCATIONS = [
   {
-    name: 'SSR International Airport',
+    name: 'SSR Airport Branch',
     type: 'Airport Branch',
     icon: Plane,
-    address: 'Arrivals Hall, Plaine Magnien, Mauritius',
-    phone: '+230 603 0000',
-    whatsapp: '+230 5703 0000',
+    address: 'SSR International Airport, Plaine Magnien, Mauritius',
+    phone: '+230 5255 3669',
+    whatsapp: '+230 5255 3669',
     hours: '24 / 7 (Pre-booked pickups)',
-    desc: 'Our flagship branch located right in the arrivals hall. Experience seamless meet & greet service from our smartly dressed concierge team the moment you land.',
+    desc: 'Our flagship branch located right at the airport. Experience seamless meet & greet service from our team the moment you land.',
     features: ['Meet & Greet Service', 'Instant Handover', 'All Hours'],
     img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1000&auto=format&fit=crop',
     mapUrl: 'https://maps.google.com/?q=SSR+International+Airport+Mauritius',
     featured: true,
   },
   {
-    name: 'Grand Baie Office',
-    type: 'Luxury Hub',
+    name: 'Pereybere',
+    type: 'Main Hub',
     icon: Building,
-    address: 'Royal Road, Grand Baie, Mauritius',
-    phone: '+230 211 1100',
-    whatsapp: '+230 5711 1100',
+    address: '23, Escale Nord Business Hub, Chemins 20 Pieds, Grand Bay, Mauritius',
+    phone: '+230 5255 3669',
+    whatsapp: '+230 5255 3669',
     hours: '08:00 – 18:00 Daily',
-    desc: 'Serving the north of the island in the heart of Mauritius\'s premier resort town. Ideal for villa deliveries, hotel handovers, and luxury sedan pickups.',
+    desc: 'Serving the north of the island in the heart of Mauritius\'s premier resort town. Ideal for villa deliveries, hotel handovers, and pickups.',
     features: ['Villa Delivery', 'Hotel Pickup', 'North Coast'],
     img: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop',
-    mapUrl: 'https://maps.google.com/?q=Grand+Baie+Mauritius',
+    mapUrl: 'https://maps.google.com/?q=Pereybere+Mauritius',
     featured: false,
   },
   {
-    name: 'Port Louis Harbour',
-    type: 'Capital City Port',
+    name: 'Trou aux Biches',
+    type: 'North Coast Branch',
     icon: Ship,
-    address: 'Quay Street, Port Louis, Mauritius',
-    phone: '+230 211 2200',
-    whatsapp: '+230 5711 2200',
-    hours: '09:00 – 17:00 Mon–Sat',
-    desc: 'Located in the vibrant capital city at the waterfront. Perfect for cruise passengers, business travellers, and those exploring the bustling city centre.',
-    features: ['Cruise Transfers', 'Business Rentals', 'City Centre'],
+    address: 'Trou aux Biches, Mauritius',
+    phone: '+230 5255 3669',
+    whatsapp: '+230 5255 3669',
+    hours: '08:00 – 18:00 Daily',
+    desc: 'Located on the popular north coast, perfect for guests staying along Trou aux Biches and nearby beach resorts.',
+    features: ['Beach Pickups', 'Resort Delivery', 'North Coast'],
     img: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1000&auto=format&fit=crop',
-    mapUrl: 'https://maps.google.com/?q=Port+Louis+Mauritius',
+    mapUrl: 'https://maps.google.com/?q=Trou+aux+Biches+Mauritius',
     featured: false,
   },
   {
-    name: 'Flic en Flac Coastal Office',
+    name: 'Flic en Flac',
     type: 'West Coast Hub',
     icon: MapPin,
-    address: 'Coastal Road, Flic en Flac, Mauritius',
-    phone: '+230 211 3300',
-    whatsapp: '+230 5711 3300',
+    address: 'Flic en Flac, Mauritius',
+    phone: '+230 5255 3669',
+    whatsapp: '+230 5255 3669',
     hours: '08:00 – 19:00 Daily',
-    desc: 'Our west coast hub serving the most beautiful lagoon resorts. Ideal for guests at Heritage, Paradis, and all beachside properties along the sunset coast.',
+    desc: 'Our west coast hub serving the most beautiful lagoon resorts along the sunset coast.',
     features: ['Resort Delivery', 'Beach Pickups', 'West Coast'],
     img: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1000&auto=format&fit=crop',
     mapUrl: 'https://maps.google.com/?q=Flic+en+Flac+Mauritius',
+    featured: false,
+  },
+  {
+    name: 'Mapou',
+    type: 'Central Branch',
+    icon: Car,
+    address: 'Mapou, Mauritius',
+    phone: '+230 5255 3669',
+    whatsapp: '+230 5255 3669',
+    hours: '08:00 – 18:00 Daily',
+    desc: 'Conveniently located in central Mauritius, easy access for vehicle handovers and returns.',
+    features: ['Central Location', 'Vehicle Handover', 'Easy Access'],
+    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=1000&auto=format&fit=crop',
+    mapUrl: 'https://maps.google.com/?q=Mapou+Mauritius',
     featured: false,
   },
 ];
@@ -87,13 +101,13 @@ export default function LocationsPage() {
             Island <span className="italic text-gold">Coverage</span>
           </h1>
           <p className="text-white/60 text-lg max-w-xl mx-auto leading-relaxed">
-            4 strategic branches + complimentary island-wide concierge delivery. Wherever you are in Mauritius, we'll bring the car to you.
+            5 branches + complimentary island-wide concierge delivery. Wherever you are in Mauritius, we'll bring the car to you.
           </p>
 
           {/* Quick stats */}
           <div className="flex flex-wrap justify-center gap-6 pt-8">
             {[
-              { val: '4', label: 'Branch Locations' },
+              { val: '5', label: 'Branch Locations' },
               { val: '2h', label: 'Max Delivery Time' },
               { val: '24/7', label: 'Airport Branch' },
               { val: 'Free', label: 'Island Delivery' },
