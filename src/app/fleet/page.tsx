@@ -120,9 +120,7 @@ export default function FleetPage() {
                     <span>{cat}</span>
                     {selectedCat === cat && <CheckCircle2 size={16} className="text-gold" />}
                     <span className="text-[10px] font-black text-navy/30">
-                      {cat === 'All'
-                        ? vehicles.reduce((sum, c) => sum + (c.count ?? 1), 0)
-                        : vehicles.filter(c => c.category === cat.toUpperCase()).reduce((sum, c) => sum + (c.count ?? 1), 0)}
+                      {cat === 'All' ? vehicles.length : vehicles.filter(c => c.category === cat.toUpperCase()).length}
                     </span>
                   </button>
                 ))}
@@ -176,7 +174,7 @@ export default function FleetPage() {
             {/* Results count */}
             <div className="flex items-center justify-between mb-6">
               <p className="text-sm text-mid-gray font-bold">
-                Showing <span className="text-navy">{filtered.length}</span> model{filtered.length !== 1 ? 's' : ''}
+                Showing <span className="text-navy">{filtered.length}</span> vehicles
                 {selectedCat !== 'All' && <span className="text-gold"> in {selectedCat}</span>}
               </p>
               {(selectedCat !== 'All' || selectedTrans !== 'All' || searchQuery) && (
@@ -216,12 +214,7 @@ export default function FleetPage() {
                         <span className="bg-navy/80 backdrop-blur-md text-white text-[9px] font-black tracking-[0.2em] px-3 py-1.5 rounded-full uppercase">
                           {car.category}
                         </span>
-                        {car.count > 1 && (
-                          <span className="bg-gold text-white text-[9px] font-black tracking-[0.15em] px-3 py-1.5 rounded-full uppercase">
-                            {car.count} available
-                          </span>
-                        )}
-                        {car.tag && car.count <= 1 && (
+                        {car.tag && (
                           <span className={`${car.tagColor} text-white text-[9px] font-black tracking-[0.15em] px-3 py-1.5 rounded-full uppercase`}>
                             {car.tag}
                           </span>
@@ -237,7 +230,7 @@ export default function FleetPage() {
                       {/* Price on image */}
                       <div className="absolute bottom-4 left-4">
                         <p className="text-2xl font-display font-black text-white drop-shadow">
-                          Rs/MUR {car.priceDay.toLocaleString()}
+                          MUR {car.priceDay.toLocaleString()}
                         </p>
                         <p className="text-[10px] text-white/70 font-black uppercase tracking-wider">/day</p>
                       </div>
