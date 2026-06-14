@@ -5,17 +5,17 @@
 @tailwind utilities;
 
 :root {
-  --navy: #1E1035;
-  --navy-light: #2D1B5E;
-  --navy-dark: #0D0820;
-  --gold: #7C3AED;
-  --gold-light: #A855F7;
-  --gold-dark: #5B21B6;
+  --navy: #0D1B2A;
+  --navy-light: #1B263B;
+  --navy-dark: #0A1118;
+  --gold: #00B5A5;
+  --gold-light: #33C4B7;
+  --gold-dark: #008C80;
   --white: #FFFFFF;
-  --off-white: #FAF8FF;
-  --light-gray: #F3F0FF;
-  --mid-gray: #9CA3AF;
-  --dark-gray: #4C1D95;
+  --off-white: #F4F6F9;
+  --light-gray: #E0E4EC;
+  --mid-gray: #8F9CAE;
+  --dark-gray: #415A77;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -111,8 +111,8 @@
   }
 
   /* Glow effects */
-  .gold-glow { box-shadow: 0 0 40px rgba(124,58,237,0.4); }
-  .navy-glow { box-shadow: 0 0 60px rgba(13,8,32,0.5); }
+  .gold-glow { box-shadow: 0 0 40px rgba(0,181,165,0.4); }
+  .navy-glow { box-shadow: 0 0 60px rgba(13,27,42,0.5); }
 
   /* Animations */
   .animate-slow-zoom {
@@ -171,8 +171,8 @@
 }
 
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(124,58,237,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,181,165,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(0,181,165,0); }
 }
 
 @keyframes slideUp {
@@ -195,9 +195,9 @@
 }
 
 /* Card shadows */
-.shadow-card { box-shadow: 0 2px 20px rgba(124,58,237,0.08); }
-.shadow-hover { box-shadow: 0 16px 48px rgba(124,58,237,0.2); }
-.shadow-luxury { box-shadow: 0 32px 80px rgba(13,8,32,0.3), 0 0 0 1px rgba(124,58,237,0.15); }
+.shadow-card { box-shadow: 0 2px 20px rgba(0,181,165,0.08); }
+.shadow-hover { box-shadow: 0 16px 48px rgba(0,181,165,0.2); }
+.shadow-luxury { box-shadow: 0 32px 80px rgba(13,27,42,0.3), 0 0 0 1px rgba(0,181,165,0.15); }
 
 /* Backdrop blur support */
 @supports not (backdrop-filter: blur(1px)) {
