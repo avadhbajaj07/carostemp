@@ -5,17 +5,17 @@
 @tailwind utilities;
 
 :root {
-  --navy: #1E293B;
-  --navy-light: #334155;
-  --navy-dark: #0F172A;
-  --gold: #0D9B84;
-  --gold-light: #2FBFA9;
-  --gold-dark: #087B68;
+  --navy: #1E1035;
+  --navy-light: #2D1B5E;
+  --navy-dark: #0D0820;
+  --gold: #7C3AED;
+  --gold-light: #A855F7;
+  --gold-dark: #5B21B6;
   --white: #FFFFFF;
-  --off-white: #F8FAFC;
-  --light-gray: #F1F5F9;
-  --mid-gray: #94A3B8;
-  --dark-gray: #334155;
+  --off-white: #FAF8FF;
+  --light-gray: #F3F0FF;
+  --mid-gray: #9CA3AF;
+  --dark-gray: #4C1D95;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -83,7 +83,7 @@
     transition: opacity 0.3s ease;
   }
   .luxury-btn:hover::before { opacity: 1; }
-  .luxury-btn:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(13,155,132,0.35); }
+  .luxury-btn:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(124,58,237,0.4); }
   .luxury-btn:active { transform: translateY(0); }
 
   /* Premium card hover */
@@ -111,8 +111,8 @@
   }
 
   /* Glow effects */
-  .gold-glow { box-shadow: 0 0 40px rgba(13,155,132,0.3); }
-  .navy-glow { box-shadow: 0 0 60px rgba(30,41,59,0.4); }
+  .gold-glow { box-shadow: 0 0 40px rgba(124,58,237,0.4); }
+  .navy-glow { box-shadow: 0 0 60px rgba(13,8,32,0.5); }
 
   /* Animations */
   .animate-slow-zoom {
@@ -171,8 +171,8 @@
 }
 
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(13,155,132,0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(13,155,132,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(124,58,237,0); }
 }
 
 @keyframes slideUp {
@@ -195,9 +195,9 @@
 }
 
 /* Card shadows */
-.shadow-card { box-shadow: 0 2px 20px rgba(30, 41, 59, 0.07); }
-.shadow-hover { box-shadow: 0 16px 48px rgba(30, 41, 59, 0.18); }
-.shadow-luxury { box-shadow: 0 32px 80px rgba(30, 41, 59, 0.25), 0 0 0 1px rgba(13,155,132,0.1); }
+.shadow-card { box-shadow: 0 2px 20px rgba(124,58,237,0.08); }
+.shadow-hover { box-shadow: 0 16px 48px rgba(124,58,237,0.2); }
+.shadow-luxury { box-shadow: 0 32px 80px rgba(13,8,32,0.3), 0 0 0 1px rgba(124,58,237,0.15); }
 
 /* Backdrop blur support */
 @supports not (backdrop-filter: blur(1px)) {
@@ -235,5 +235,5 @@
 /* Input focus ring custom */
 input:focus, select:focus, textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(13, 155, 132, 0.25);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
 }

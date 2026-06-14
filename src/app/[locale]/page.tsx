@@ -119,8 +119,8 @@ export default async function HomePage() {
       <section className="py-24 max-w-7xl mx-auto px-6 w-full">
         <div className="relative rounded-[3rem] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2070&auto=format&fit=crop"
-            alt="Mauritius coastal road drive"
+            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop"
+            alt="Luxury car driving on scenic road"
             className="w-full h-[500px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy/70 to-transparent" />
